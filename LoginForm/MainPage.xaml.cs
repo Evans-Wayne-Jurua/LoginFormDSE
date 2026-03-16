@@ -60,7 +60,7 @@ namespace LoginForm
             //to write quueries to a database we need to use a command
             SqlCommand cmd = con.CreateCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select *from login_tbl where employeeName=@usn and Employee_Password=
+            cmd.CommandText = "select *from login_tbl where employeeName=@usn and Employee_Password=@pwd";
             //cmd.CommandText = "select *from login_tbl where employeeName=" + UsernameBox.Text + "' and Employee_PAssword'" + PasswordBox.Password+ "' ;";
 
                 SqlParameter uname = new SqlParameter("@usn", System.Data.SqlDbType.VarChar);
